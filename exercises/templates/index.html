@@ -1,1 +1,26 @@
 <!-- Put the HTML template for your page here! -->
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"
+    href="{{url_for('static',filename='style.css')}}">   
+</head>
+    <body>
+    
+        <h1>
+            Swimming
+        </h1>
+        <p>
+            Swimming is the best sport!
+            Swimming trains every muscle in your body so you'll become fit faster.
+        </p>
+
+        <u1>
+            {% for pet in pets %}
+            <li>{{pet}}</li> 
+            {% endfor %}
+            
+        </u1>
+    </body>
+
+</html>
