@@ -6,7 +6,8 @@ def home_page():
     pets=["dragging dragon", "katrin cat" ]
     return render_template(
         "index.html",
-        pets=pets
+        pets=pets,
+        no_pets=True 
     )
 
 

@@ -6,21 +6,37 @@
     href="{{url_for('static',filename='style.css')}}">   
 </head>
     <body>
-    
+        <div class=title>
         <h1>
-            Swimming
+            Pets
         </h1>
-        <p>
-            Swimming is the best sport!
-            Swimming trains every muscle in your body so you'll become fit faster.
-        </p>
+        </div>
+        <div>
+        {% if no_pets == True %}
+            <p>
+                I dont have any pets, here are the pets i would like to have:
 
+            </p>
         <u1>
+            
+            {% for pet in pets %}
+            <li>{{pet}}</li> 
+            {% endfor %}
+                    
+        </u1>
+        {% else %}
+            <p>My pets are:</p>
+            
+            <h2>Pets:</h2>
+        <u1>
+            
             {% for pet in pets %}
             <li>{{pet}}</li> 
             {% endfor %}
             
         </u1>
+        {% endif %}
+        </div class=function>
     </body>
 
 </html>
